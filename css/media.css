@@ -1,0 +1,267 @@
+@media (max-width: 1230px) {
+
+}
+
+@media (max-width: 1024px) {
+
+    /* Intro */
+    .intro__title {
+        font-size: 52px;
+    }
+
+    .collapsible {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* Header */
+    .header__wrapper {
+        height: 60px;
+        padding: 0;
+    }
+
+    .logo svg {
+        display: block;
+        height: 50px;
+    }
+
+    .header__navigation {
+        display: none;
+        position: absolute;
+        align-items: center;
+        top: 60px;
+        width: 100%;
+
+        background-color: #983a87db;
+
+        flex-direction: column;
+        row-gap: 5px;
+        padding: 5px;
+
+        transition: .2s all linear;
+    }
+
+    .header__navigation.burger_active {
+        display: flex;
+        transition: .2s all linear;
+    }
+
+    .header__navigation li {
+        width: 100%;
+    }
+
+
+    .nav__btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .burger-wrapper {
+        display: block;
+        position: relative;
+        left: 5%;
+        flex-basis: 12%;
+        min-width: 55px;
+    }
+
+
+    /* Intro */
+    .intro__title {
+        text-align: center;
+        font-size: 41px;
+    }
+
+    .intro__subtitle {
+        text-align: justify;
+    }
+
+    .intro__video {
+        padding: 0;
+    }
+
+    /* Gallery */
+    .gallery-gap {
+        height: 60px;
+    }
+
+    .title {
+        padding: 10px 0;
+    }
+
+    .gallery__product-number {
+        opacity: .8;
+    }
+
+    .lg-toolbar .lg-icon {
+        width: 40px;
+    }
+
+    #lg-counter {
+        padding-left: 15px;
+    }
+
+    /* FAQ */
+    .faq__container{
+        padding: 9px 0;
+    }
+
+    .faq__item {
+        flex-basis: 100%;
+    }
+
+    .collapsible {
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 676px) {
+
+    /* pop up */
+    .pop-up__description {
+        line-height: 1.5;
+    }
+
+    /* Intro */
+    .intro__inner {
+        flex-direction: column;
+        position: relative;
+        gap: 10px;
+
+        padding: 60px 0 15px;
+
+        transform: none;
+    }
+
+    .intro__title {
+        text-align: center;
+        font-size: 50px;
+    }
+
+    .intro__subtitle {
+        text-align: center;
+    }
+
+    .intro__content {
+        height: calc(100vh - 60px);
+        margin: 0;
+    }
+
+    .intro__video {
+        height: auto;
+    }
+
+    .intro__img {
+        display: none;
+    }
+
+    .intro__btn {
+        height: 40px;
+        margin: 10px 0;
+    }
+
+    .intro__wrapper-img {
+        margin: 0 auto;
+    }
+
+    /* Gallery */
+    .title {
+        font-size: 40px;
+        padding: 7px 0;
+    }
+
+    /* Feedback */
+    .slider-content {
+        padding: 10px 0 40px
+    }
+
+    /* FAQ */
+    .faq__title {
+        font-size: 37px;
+    }
+
+    /* Footer */
+    .main-inform {
+        flex-direction: column;
+        align-content: center;
+    }
+
+}
+
+@media (max-width: 409px) {
+    /* Scroll-up */
+    .scroll-up {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .scroll-up--active {
+        opacity: 0.9;
+    }
+
+    .scroll-up:hover {
+        color: orange;
+    }
+
+    .scroll-up--active:hover {
+        opacity: 1;
+    }
+
+    /* Intro */
+    .intro__title {
+        font-size: 43px;
+    }
+
+    /* Gallery */
+    .gallery__extended {
+        padding: 3px 0 10px 0;
+    }
+
+    /* FAQ */
+    .faq__title {
+        font-size: 28px;
+    }
+}
+
+
+
+
+/* HEIGHT */
+
+@media (max-height: 625px) {
+
+    /* Intro */
+    .intro__img {
+        width: 280px;
+    }
+
+    .intro__wrapper-img {
+        width: 280px;
+    }
+
+    .intro__title {
+        font-size: 40px;
+    }
+
+    .intro__subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-height: 591px) {
+
+    .intro__content {
+        height: auto;
+        margin: 0 7px;
+    }
+
+    .intro__inner {
+        position: relative;
+        padding: 80px 0 10px 0;
+        transform: translate(0, 0);
+    }
+
+}

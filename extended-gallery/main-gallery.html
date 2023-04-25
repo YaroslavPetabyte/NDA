@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDA Gallery</title>
+    <!-- Gallery CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <!-- Borrowed styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Main styles -->
+    <link rel="stylesheet" href="style-gallery.css">
+    <!-- Borrowed styles main media -->
+    <link rel="stylesheet" href="../css/media.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/gallery-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/gallery-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/gallery-favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/gallery-favicon/site.webmanifest">
+    <link rel="mask-icon" href="../favicon/gallery-favicon/safari-pinned-tab.svg" color="#6e73f3">
+    <link rel="shortcut icon" href="../favicon/gallery-favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#6e73f3">
+</head>
+<body>
+
+    <!-- Scroll-up -->
+    <div class="scroll-up">
+        <svg class="scroll-up__svg" viewBox="-2 -2 52 52">
+            <path class="scroll-up__svg-path"
+            d="
+                M24,0
+                a24,24 0 0,1 0,48
+                a24,24 0 0,1 0,-48
+                ">
+        </svg>
+    </div>
+
+    <!-- Pop up -->
+    <div class="pop-up" id="popUpOrder"> <!--pop-up-->
+        <div class="pop-up__container"> <!--pop-up__container-->
+            <h3 class="pop-up__title">Зробити замовлення</h3>
+            <p class="pop-up__description">Щоб зробити замовлення вам необхідно заповнити всі поля нижче</p>
+            <form class="pop-up__form" action="">
+                <input required class="pop-up__name" type="text" placeholder="Ім'я">
+                <input required class="pop-up__surname" type="text" placeholder="Прізвище">
+                <input required class="pop-up__product-number" type="text" id="popUpProductNumber" placeholder="Код товару: (приклад: 000231) *">
+                <input required class="pop-up__mail" type="email" placeholder="Електронна пошта">
+                <input required class="pop-up__phone" type="text" name="phone" id="popUpPhone" placeholder="Номер телефону" >
+                <textarea class="pop-up__textarea" name="pop-up__textarea" placeholder="Тут ви можете задати своє запитання і ми вам відповімо на нього на електрону пошту, яку ви вказали вище." cols="30" rows="10"></textarea>
+                <input class="pop-up__submit" type="submit">
+            </form>
+            <p class="pop-up__hint">* Код товару ви можете побачити при наведені на його картинку в блоці "Галерея".</p>
+            <button class="pop-up__close" id="popUpOrderClose">&#10006</button>
+        </div> <!--/pop-up__container-->
+    </div> <!--/pop-up -->
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container"> <!--container -->
+            <div class="header__wrapper"><!--header__wrapper-->
+                <div class="logo">
+                    <a href="#">
+                        <svg class="contacts__exit-svg">
+                            <use xlink:href="../sprite/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+                </div>
+                <nav class="header__navigation">
+                    <li><a href="../index.html" class="nav__home nav__btn">Головна сторінка</a></li>
+                    <li><button class="nav__galery nav__btn" id="makeAnOrder">Зробити замовлення</button></li>
+                </nav>
+                <div class="header__icon">
+                    <ul>
+                        <li><a class="instagram" href="https://www.instagram.com/stock_nda_shopps/" target="_blank">
+                            <svg class="contacts__exit-svg">
+                                <use xlink:href="../sprite/sprite.svg#instagram"></use>
+                            </svg></a>
+                        </li>
+                        <li><a class="facebook" href="https://www.facebook.com/profile.php?id=100012419625020" target="_blank">
+                            <svg class="contacts__exit-svg">
+                                <use xlink:href="../sprite/sprite.svg#facebook"></use>
+                            </svg></a>
+                        </li>
+                        <li><a class="phone" href="tel:+380987457987">
+                            <svg class="contacts__exit-svg">
+                                <use xlink:href="../sprite/sprite.svg#phone"></use>
+                            </svg></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="burger-wrapper">
+                    <div class="burger">
+                        <span class="burger__line burger__line_first"></span>
+                        <span class="burger__line burger__line_second"></span>
+                        <span class="burger__line burger__line_third"></span>
+                        <span class="burger__line burger__line_fourth"></span>
+                    </div>
+                </div>
+            </div> <!--/header__wrapper-->
+        </div> <!--/container -->
+    </header>
+
+    <!-- Gallery gap -->
+    <div class="gallery-gap"></div>
+
+
+    <!-- Gallery -->
+    <section class="gallery">
+        <h2 class="gallery__title title">Галерея Товарів</h2>
+        <div class="container"> <!--containet-->
+            <div class="wrapper__gallery"> <!--wrapper__gallery-->
+
+                <a href="../img/gallery/000001.jpg">
+                    <img src="../img/gallery/000001.jpg" alt="#">
+                    <div class="gallery__price"><b>300</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000001</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000002.jpg">
+                    <img src="../img/gallery/000002.jpg" alt="#">
+                    <div class="gallery__price"><b>200</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000002</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000003.jpg">
+                    <img src="../img/gallery/000003.jpg" alt="#">
+                    <div class="gallery__price"><b>250</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000003</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000004.jpg">
+                    <img src="../img/gallery/000004.jpg" alt="#">
+                    <div class="gallery__price"><b>1300</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000004</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000005.jpg">
+                    <img src="../img/gallery/000005.jpg" alt="#">
+                    <div class="gallery__price"><b>80</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000005</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000006.jpg">
+                    <img src="../img/gallery/000006.jpg" alt="#">
+                    <div class="gallery__price"><b>300</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000006</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000004.jpg">
+                    <img src="../img/gallery/000004.jpg" alt="#">
+                    <div class="gallery__price"><b>100</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000007</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000005.jpg">
+                    <img src="../img/gallery/000005.jpg" alt="#">
+                    <div class="gallery__price"><b>780</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000008</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000006.jpg">
+                    <img src="../img/gallery/000006.jpg" alt="#">
+                    <div class="gallery__price"><b>390</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000009</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000004.jpg">
+                    <img src="../img/gallery/000004.jpg" alt="#">
+                    <div class="gallery__price"><b>140</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000010</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000005.jpg">
+                    <img src="../img/gallery/000005.jpg" alt="#">
+                    <div class="gallery__price"><b>90</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000011</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000001.jpg">
+                    <img src="../img/gallery/000001.jpg" alt="#">
+                    <div class="gallery__price"><b>350</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000012</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000002.jpg">
+                    <img src="../img/gallery/000002.jpg" alt="#">
+                    <div class="gallery__price"><b>165</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000013</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000003.jpg">
+                    <img src="../img/gallery/000003.jpg" alt="#">
+                    <div class="gallery__price"><b>188</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000014</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000006.jpg">
+                    <img src="../img/gallery/000006.jpg" alt="#">
+                    <div class="gallery__price"><b>300</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000015</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000004.jpg">
+                    <img src="../img/gallery/000004.jpg" alt="#">
+                    <div class="gallery__price"><b>144</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000016</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000005.jpg">
+                    <img src="../img/gallery/000005.jpg" alt="#">
+                    <div class="gallery__price"><b>190</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000017</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000006.jpg">
+                    <img src="../img/gallery/000006.jpg" alt="#">
+                    <div class="gallery__price"><b>333</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000018</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000004.jpg">
+                    <img src="../img/gallery/000004.jpg" alt="#">
+                    <div class="gallery__price"><b>1000</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000019</b></span></div>
+                </a>
+
+                <a href="../img/gallery/000005.jpg">
+                    <img src="../img/gallery/000005.jpg" alt="#">
+                    <div class="gallery__price"><b>999</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000020</b></span></div>
+                </a>
+
+            </div> <!--/wrapper__gallery-->
+
+        </div> <!--/containet-->
+    </section>
+
+    <!-- Footer -->
+    <section class="footer"> <!--footer-->
+        <div class="container"> <!--container-->
+            <div class="footer__wrapper"> <!--footer__wrapper-->
+                <h3 class="footer__title-contact">Контакти із магазином:</h3>
+                <dl class="main-inform">
+                    <div class="contact__tel">
+                        <dt>
+                            <a href="tel:+380987457987">
+                                <svg class="contacts__footer-svg">
+                                    <use xlink:href="../sprite/sprite.svg#phone-footer"></use>
+                                </svg>
+                            </a>
+                        </dt>
+                        <dd><a class="footer__contact-link" href="tel:+380987457987">+380 (98) 745 79 87</a></dd>
+                    </div>
+                    <div class="contact__mail">
+                        <dt>
+                            <a href="mailto:nadia.petak@gmail.com">
+                                <svg class="contacts__footer-svg">
+                                    <use xlink:href="../sprite/sprite.svg#mail-footer"></use>
+                                </svg>
+                            </a>
+                        </dt>
+                        <dd><a class="footer__contact-link" href="mailto:nadia.petak@gmail.com">nadia.petak@gmail.com</a></dd>
+                    </div>
+                    <div class="contact__insta">
+                        <dt>
+                            <a href="https://www.instagram.com/stock_nda_shopps/" target="_blank">
+                                <svg class="contacts__footer-svg">
+                                    <use xlink:href="../sprite/sprite.svg#instagram-footer"></use>
+                                </svg>
+                            </a>
+                        </dt>
+                        <dd><a class="footer__contact-link" href="https://www.instagram.com/stock_nda_shopps/" target="_blank">stock_nda_shopps</a></dd>
+                    </div>
+                </dl>
+            </div> <!--/footer__wrapper-->
+        </div> <!--/container-->
+        <div class="add-inform">
+            <h3 class="footer__title-add-inform">Додаткова інформація:</h3>
+            <div class="add-inform__wrapper">
+                <p>Сайт створено програмістом <span class="footer__contact-wrap"><a class="footer__contact-link" target="_blank" href="https://www.facebook.com/profile.php?id=100009073024281">Yaroslav Petak</a></span></p>
+                <p>© stock_nda_shopps, 2022 - 2023 Усі права дотримано.</p>
+                <p>Використання матеріалів сайту допускається лише за умови посилання на «stock_nda_shopps».</p>
+            </div>
+        </div>
+    </section> <!--/footer-->
+
+
+    <!-- Input Mask -->
+    <script src="../js/inputmask.min.js"></script>
+
+    <!-- Libs for gallery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <!-- JS Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.js" integrity="sha256-zFJzO3NTDNuP92ZYleCxvoj2fx3Pc47Byj7EBPJyP5c=" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="../js/common-script.js"></script>
+
+    <!-- JavaScript main -->
+    <script src="script-gallery.js"></script>
+
+</body>
+</html>

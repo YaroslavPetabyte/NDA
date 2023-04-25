@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDA</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.css" integrity="sha256-Q1lkPhtjUL/9bhbVQ2A+p7OThVlX55Ksf5F4qB7QsU0=" crossorigin="anonymous">
+    <!-- Gallery CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Media CSS -->
+    <link rel="stylesheet" href="./css/media.css">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/main-favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/main-favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/main-favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/main-favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/main-favicon/safari-pinned-tab.svg" color="#ef89dc">
+    <link rel="shortcut icon" href="favicon/main-favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#d967c4">
+    <meta name="theme-color" content="#ca5ebe">
+</head>
+<body>
+
+    <!-- Scroll-up -->
+    <div class="scroll-up">
+        <svg class="scroll-up__svg" viewBox="-2 -2 52 52">
+            <path class="scroll-up__svg-path"
+            d="
+                M24,0
+                a24,24 0 0,1 0,48
+                a24,24 0 0,1 0,-48
+             ">
+        </svg>
+    </div>
+
+    <!-- Pop up -->
+    <div class="pop-up" id="popUpOrder"> <!--pop-up-->
+        <div class="pop-up__container"> <!--pop-up__container-->
+            <h3 class="pop-up__title">Зробити замовлення</h3>
+            <p class="pop-up__description">Щоб зробити замовлення вам необхідно заповнити всі поля нижче</p>
+            <form class="pop-up__form" action="">
+                <input required class="pop-up__name" type="text" placeholder="Ім'я" tabindex="1" title="Введіть ваше ім'я">
+                <input required class="pop-up__surname" type="text" placeholder="Прізвище" tabindex="2" title="Введіть ваше прізвище">
+                <input required class="pop-up__product-number" type="text" id="popUpProductNumber" placeholder="Код товару: (приклад: 000231) *" tabindex="3" title="Введіть номер товару">
+                <input required class="pop-up__mail" type="email" placeholder="Електронна пошта" tabindex="4" title="Введіть вашу електронну пошту">
+                <input required class="pop-up__phone" type="text" name="phone" id="popUpPhone" placeholder="Номер телефону" tabindex="5" title="Введіть ваш номер телефону">
+                <textarea class="pop-up__textarea" name="pop-up__textarea" placeholder="Тут ви можете задати своє запитання і ми вам відповімо на нього на електрону пошту, яку ви вказали вище." cols="30" rows="8" tabindex="6"></textarea>
+                <input class="pop-up__submit" type="submit">
+            </form>
+            <p class="pop-up__hint">* Код товару ви можете побачити при наведені на його картинку в блоці "Галерея" або при його перегляді в повноекранному резжимі.</p>
+            <button class="pop-up__close" id="popUpOrderClose">&#10006</button>
+        </div> <!--/pop-up__container-->
+    </div> <!--/pop-up -->
+
+    <!-- Pop up send -->
+    <div class="successfully-send">Ваша заявка <b>успішно</b> відправленa!</div>
+    <div class="failed-to-send"><b>На жаль, не вдалося відправити вашу заявку!</b> Спробуйте пізніше або звяжіться із нами в інший спосіб.</div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container"> <!--container -->
+            <div class="header__wrapper"><!--header__wrapper-->
+                <div class="logo">
+                    <a href="#">
+                        <svg class="contacts__exit-svg">
+                            <use xlink:href="sprite/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+                </div>
+                <nav class="header__navigation">
+                    <li><button class="nav__home nav__btn" name="intro">Головна</button></li>
+                    <li><button class="nav__galery nav__btn" name="gallery">Галерея</button></li>
+                    <li><button class="nav__feedback nav__btn" name="feedback">Відгуки</button></li>
+                    <li><button class="nav__FAQ nav__btn" name="faq">FAQ</button></li>
+                    <li><button class="nav__contacts nav__btn" name="footer">Контакти</button></li>
+                </nav>
+                <div class="header__icon">
+                    <ul>
+                        <li><a class="instagram" href="https://www.instagram.com/stock_nda_shopps/" target="_blank">
+                            <svg class="contacts__exit-svg">
+                                <use xlink:href="sprite/sprite.svg#instagram"></use>
+                            </svg></a>
+                        </li>
+                        <li><a class="facebook" href="https://www.facebook.com/profile.php?id=100012419625020" target="_blank">
+                            <svg class="contacts__exit-svg">
+                                <use xlink:href="sprite/sprite.svg#facebook"></use>
+                            </svg></a>
+                        </li>
+                        <li><a class="phone" href="tel:+380980000000">
+                            <svg class="contacts__exit-svg">
+                                <use xlink:href="sprite/sprite.svg#phone"></use>
+                            </svg></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="burger-wrapper">
+                    <div class="burger">
+                        <span class="burger__line burger__line_first"></span>
+                        <span class="burger__line burger__line_second"></span>
+                        <span class="burger__line burger__line_third"></span>
+                        <span class="burger__line burger__line_fourth"></span>
+                    </div>
+                </div>
+
+            </div> <!--/header__wrapper-->
+        </div> <!--/container -->
+    </header>
+
+    <!-- Intro -->
+    <section class="intro block" id="intro">
+        <div class="container">
+            <div class="wrapper__intro">
+                <div class="intro__inner">
+                    <div class="intro__content">
+                        <h1 class="intro__title">NDA Stock&nbspShop</h1>
+                        <p class="intro__subtitle">Вітаю вас у магазині стильного одягу. У нас можна прідібрати собі вишуканий та конфортний одяг для спорту, вечірки, походу на пляж чи навіть ділової зустрірі.</p>
+                        <div class="intro__video">
+                            <div class="video" data-src="https://www.youtube.com/watch?v=LysIB_2lvuM">
+                                <svg version="1.1" viewBox="0 0 68 48" width="100%"><path class="video__btn-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="video__btn-icon" d="M 45,24 27,14 27,34"></path></svg>
+                            </div>
+                        </div>
+                        <button class="intro__btn" id="makeAnOrder">Зробити замовлення</button>
+                    </div>
+
+                    <div class="intro__wrapper-img">
+                        <img class="intro__img" src="./img/gallery/dresses.jpg" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery block" id="gallery">
+        <h2 class="gallery__title title">Галерея</h2>
+        <div class="container"> <!--containet-->
+            <div class="wrapper__gallery"> <!--wrapper__gallery-->
+
+                <a class="link__IMG" href="./img/gallery/000001.jpg">
+                    <img src="./img/gallery/000001.jpg" alt="Нові чорні, спортивні шатни">
+                    <div class="gallery__price"><b>300</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000001</b></span></div>
+                </a>
+
+                <a class="link__IMG" href="./img/gallery/000002.jpg">
+                    <img src="./img/gallery/000002.jpg" alt="Джинсові штани та светр LEVI'S">
+                    <div class="gallery__price"><b>200</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000002</b></span></div>
+                </a>
+
+                <a href="./img/gallery/000003.jpg">
+                    <img src="./img/gallery/000003.jpg" alt="Три Футболки розміру S">
+                    <div class="gallery__price"><b>250</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000003</b></span></div>
+                </a>
+
+                <a href="./img/gallery/000004.jpg">
+                    <img src="./img/gallery/000004.jpg" alt="Чорна міні спідниця з гудзиками">
+                    <div class="gallery__price"><b>1300</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000004</b></span></div>
+                </a>
+
+                <a href="./img/gallery/000005.jpg">
+                    <img src="./img/gallery/000005.jpg" alt="Джинсові штани та два поло з гудзиками">
+                    <div class="gallery__price"><b>80</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000005</b></span></div>
+                </a>
+
+                <a href="./img/gallery/000006.jpg">
+                    <img src="./img/gallery/000006.jpg" alt="Джинси і сірий топ">
+                    <div class="gallery__price"><b>300</b><span>&#8372</span></div>
+                    <div class="gallery__product-number">&#8470<span><b>000006</b></span></div>
+                </a>
+
+            </div> <!--/wrapper__gallery-->
+
+            <div class="gallery__extended"><a class="gallery__extended-link" href="./extended-gallery/main-gallery.html" target="_blank">... дивитися більше товарів <span class="gallery__extended-arrow">&#129095</span></a>
+            </div>
+
+        </div> <!--/containet-->
+    </section>
+
+    <!-- Feedback -->
+    <section class="feedback block" id="feedback"> <!--feedback-->
+        <h2 class="feedback__title title">Відгуки</h2>
+        <div class="container"> <!--container-->
+            <div class="slider-content swiper"> <!--swiper-->
+                <div class="swiper-wrapper"> <!--swiper-wrapper-->
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./img/feedback/feedback1.jpg" alt="#" class="card-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./img/feedback/feedback2.jpg" alt="#" class="card-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./img/feedback/feedback3.jpg" alt="#" class="card-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./img/feedback/feedback4.jpg" alt="#" class="card-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./img/feedback/feedback5.jpg" alt="#" class="card-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./img/feedback/feedback6.jpg" alt="#" class="card-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./img/feedback/feedback7.jpg" alt="#" class="card-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="./img/feedback/feedback8.jpg" alt="#" class="card-img">
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!--/swiper-wrapper-->
+            </div> <!--/swiper-->
+            <div class="swiper-button-next swiper-nawBtn"></div>
+            <div class="swiper-button-prev swiper-nawBtn"></div>
+            <div class="swiper-pagination"></div>
+
+        </div> <!--/container-->
+    </section> <!--/feedback-->
+
+    <!-- FAQ -->
+    <section class="faq block" id="faq"> <!-- FAQ -->
+        <div class="container"> <!-- container-->
+            <h2 class="title faq__title">Відповіді на поширені запитання</h2>
+            <div class="faq__container"> <!-- faq__container-->
+                <div class="faq__item">
+                    <button class="collapsible">Як я можу оплатити онлайн?</button>
+                    <div class="content">
+                        <p>На даний момент доступний лише один спосіб оплати онлайн - попередній перекид 100% суми на карту ПриватБанк або Monobank.</p>
+                    </div>
+                    <button class="collapsible">Оплата через накладений платіж (Нова Пошта)</button>
+                    <div class="content">
+                        <p>Коли товар буде доставлений на пошту, ви зможете переконатися в його цілісній доставці та здійснити оплату відразу на місті.</p>
+                    </div>
+                    <button class="collapsible">Знижки або спецальні пропозиції</button>
+                    <div class="content">
+                        <p>Про знижки та спеціальні пропозиції ви зможете дізнатися регулярно відслідковуючи даний сайт або офіційну сторінку NDA в Інстаграмі <a href="https://www.instagram.com/stock_nda_shopps/">@stock_nda_shopps</a>.</p>
+                    </div>
+                </div>
+
+                <div class="faq__item">
+                    <button class="collapsible">Попереднє замовлення</button>
+                    <div class="content">
+                        <p>На жаль, на даний момент функція не доступна, але ми її скоро запустимо, тому залишайтеся із нами;)</p>
+                    </div>
+                    <button class="collapsible">Оплата в Bitcoin</button>
+                    <div class="content">
+                        <p>На жаль, на даний момент функція не доступна, але ми її скоро запустимо, тому залишайтеся із нами;)</p>
+                    </div>
+                    <button class="collapsible">Гарантійний термін</button>
+                    <div class="content">
+                        <p>У випадку коли вам не підішов розмір або колір, товар обміну не підлягає. Якщо на товарі були знайдені якісь пошкодження, то товар підлягає поверненню лише у день покупки. Просимо одразу оглянути товар при отриманні на пошті або через курєра.</p>
+                    </div>
+                </div>
+            </div> <!--/faq__container-->
+        </div> <!--/container-->
+    </section> <!--/FAQ -->
+
+    <!-- Footer -->
+    <section class="footer block" id="footer"> <!--footer-->
+        <div class="container"> <!--container-->
+            <div class="footer__wrapper"> <!--footer__wrapper-->
+                <h3 class="footer__title-contact">Контакти із магазином:</h3>
+                <dl class="main-inform">
+                    <div class="contact__tel">
+                        <dt>
+                            <a href="tel:+380980000000">
+                                <svg class="contacts__footer-svg">
+                                    <use xlink:href="sprite/sprite.svg#phone-footer"></use>
+                                </svg>
+                            </a>
+                        </dt>
+                        <dd><a class="footer__contact-link" href="tel:+380980000000">+380 (98) 000 00 00</a></dd>
+                    </div>
+                    <div class="contact__mail">
+                        <dt>
+                            <a href="mailto:nadia.petak@gmail.com">
+                                <svg class="contacts__footer-svg">
+                                    <use xlink:href="sprite/sprite.svg#mail-footer"></use>
+                                </svg>
+                            </a>
+                        </dt>
+                        <dd><a class="footer__contact-link" href="mailto:nadia.petak@gmail.com">nadia.petak@gmail.com</a></dd>
+                    </div>
+                    <div class="contact__insta">
+                        <dt>
+                            <a href="https://www.instagram.com/stock_nda_shopps/" target="_blank">
+                                <svg class="contacts__footer-svg">
+                                    <use xlink:href="sprite/sprite.svg#instagram-footer"></use>
+                                </svg>
+                            </a>
+                        </dt>
+                        <dd><a class="footer__contact-link" href="https://www.instagram.com/stock_nda_shopps/" target="_blank">stock_nda_shopps</a></dd>
+                    </div>
+                </dl>
+            </div> <!--/footer__wrapper-->
+        </div> <!--/container-->
+        <div class="add-inform">
+            <h3 class="footer__title-add-inform">Додаткова інформація:</h3>
+            <div class="add-inform__wrapper">
+                <p>Сайт створено програмістом <span class="footer__contact-wrap"><a class="footer__contact-link" target="_blank" href="https://www.facebook.com/profile.php?id=100009073024281">Yaroslav Petak</a></span></p>
+                <p>© stock_nda_shopps, 2022 - 2023 Усі права дотримано.</p>
+                <p>Використання матеріалів сайту допускається лише за&nbsp;умови посилання на&nbsp;&laquo;stock_nda_shopps&raquo;.</p>
+            </div>
+        </div>
+    </section> <!--/footer-->
+
+
+    <!-- Input Mask -->
+    <script src="./js/inputmask.min.js"></script>
+
+    <!-- Libs for gallery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+    <!-- JS Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8.3.2/swiper-bundle.min.js" integrity="sha256-zFJzO3NTDNuP92ZYleCxvoj2fx3Pc47Byj7EBPJyP5c=" crossorigin="anonymous"></script>
+
+    <!-- Main JavaScript -->
+    <script src="./js/main-script.js"></script>
+
+    <!-- Common JavaScript -->
+    <script src="./js/common-script.js"></script>
+
+</body>
+</html>

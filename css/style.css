@@ -90,7 +90,7 @@ html {
     width: 100%;
     height: 100%;
     font-size: 20px;
-    content: '⬆';
+    content: '\2B06';
 }
 
 .scroll-up:hover {
@@ -184,9 +184,13 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 5px;
+    /* gap: 5px; */
 
     margin: 0 5px 0 0;
+}
+
+.header__icon ul > li {
+    padding: 0 3px;
 }
 
 .header__icon svg {
@@ -472,7 +476,7 @@ html {
 
 /* == Gallery == */
 .gallery {
-    background: linear-gradient(#add8f1 0% 10%, #64c8e6 20% 50%, #91e5d6);
+    background: linear-gradient(#add8f1, #64c8e6, #91e5d6);
 }
 
 .gallery__title {
@@ -784,7 +788,11 @@ html {
 .main-inform div {
     font-size: 15px;
     display: flex;
-    gap: 8px;
+    /* gap: 8px; */
+}
+
+.main-inform div > * {
+    padding: 0 4px;
 }
 
 .footer__title-add-inform {
@@ -833,6 +841,7 @@ html {
 
 .pop-up__form * {
     padding: 2px 3px;
+    margin: 2px 0;
 }
 
 .pop-up__container {
@@ -867,7 +876,7 @@ html {
 
 .pop-up__form {
     display: flex;
-    gap: 5px;
+    /* gap: 5px; */
     flex-direction: column;
 }
 

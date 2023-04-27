@@ -38,10 +38,14 @@
         background-color: #983a87db;
 
         flex-direction: column;
-        row-gap: 5px;
-        padding: 5px;
+        /* row-gap: 5px; */
+        padding: 3px;
 
         transition: .2s all linear;
+    }
+
+    .header__navigation > li {
+        margin: 2px 0;
     }
 
     .header__navigation.burger_active {

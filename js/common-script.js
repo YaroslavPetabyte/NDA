@@ -35,12 +35,15 @@ const makeAnOrder = document.querySelector('#makeAnOrder');
 const popUpOrder = document.querySelector('#popUpOrder');
 const popUpOrderClose = document.querySelector('#popUpOrderClose');
 const popUpName = document.querySelector('.pop-up__name');
-
-
+const popUpFocus = function() {
+  if (document.documentElement.clientWidth > 676) {
+    return popUpName.focus();
+  }
+}
 
 makeAnOrder.addEventListener('click', function() {
   popUpOrder.classList.add('pop-up--active');
-  popUpName.focus()
+  popUpFocus();
 });
 
 popUpOrderClose.addEventListener('click', function() {
@@ -135,7 +138,7 @@ function orderProductInner(codeOnProduct) {
     popUpOrder.classList.add('pop-up--active');
     const popUpProductNumber = document.querySelector('.pop-up__product-number');
     popUpProductNumber.value = codeOnProduct;
-    popUpName.focus();
+    popUpFocus();
   });
 }
 
